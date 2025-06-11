@@ -32,14 +32,7 @@ Before starting, ensure you have:
 
 ### Step 1: Install flyctl CLI
 
-Install the fly.io command line tool:
-
-**macOS/Linux:**
-
-```bash
-curl -L https://fly.io/install.sh | sh
-```
-
+Install the fly.io command line tool to deploy.
 **Windows (PowerShell):**
 
 ```powershell
@@ -246,9 +239,9 @@ tail -f /var/log/nginx/stream.log
 Edit `nginx.conf` to add more upstream servers:
 
 ```nginx
-upstream facebook_rtmp {
-    server rtmp://live-api-s.facebook.com:80/rtmp;
-}
+if [[ -n "$X_STREAM_KEY" ]]; then
+  echo "            push rtmp://va.pscp.tv:80/x/$X_STREAM_KEY;" >> /etc/nginx/nginx.conf
+fi
 ```
 
 ### Change Regions
