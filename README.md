@@ -23,7 +23,7 @@ With this forwarder only streams with the correct key can publish!
 
 Before starting, ensure you have:
 
-- A [fly.io account](https://fly.io/signup) (free tier available)
+- A [fly.io account](https://fly.io/signup)
 - YouTube Live streaming enabled on your YouTube channel
 - Your YouTube Live stream key ready
 - A computer with internet access
